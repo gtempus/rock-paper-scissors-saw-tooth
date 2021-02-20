@@ -14,6 +14,24 @@ function computersTurn() {
   }
 }
 
+class Rock {
+  get name() {
+    return "rock";
+  }
+
+  beats(computerChoice) {
+    let results;
+
+    if (computerChoice === "scissors") {
+      results = "Your rock wins!";
+    } else {
+      results = "You lose, paper wins ::sad face::";
+    }
+
+    return results;
+  }
+}
+
 function compare(yourChoice) {
   // Declare the variables
   const computerChoice = computersTurn();
@@ -22,12 +40,8 @@ function compare(yourChoice) {
   // Use the player's choice and computer's choice to find the winner
   if (yourChoice === computerChoice) {
     results = "The result is a tie!";
-  } else if (yourChoice === "rock") {
-    if (computerChoice === "scissors") {
-      results = "Your rock wins!";
-    } else {
-      results = "You lose, paper wins ::sad face::";
-    }
+  } else if (yourChoice === new Rock().name) {
+    results = new Rock().beats(computerChoice)
   } else if (yourChoice === "paper") {
     if (computerChoice === "rock") {
       results = "Your paper wins!";

@@ -32,7 +32,7 @@ class Rock {
   }
 }
 
-function compare(yourChoice) {
+export function compare(yourChoice) {
   // Declare the variables
   const computerChoice = computersTurn();
   let results;

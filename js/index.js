@@ -23,9 +23,7 @@ export function compare(yourChoice) {
   let results;
 
   // Use the player's choice and computer's choice to find the winner
-  if (yourChoice === computerChoice) {
-    results = "The result is a tie!";
-  } else if (yourChoice === new Rock().name) {
+  if (yourChoice === new Rock().name) {
     results = new Rock().beats(computerChoice)
   } else if (yourChoice === new Paper().name) {
     results = new Paper().beat(computerChoice);

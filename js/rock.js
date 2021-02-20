@@ -6,7 +6,9 @@ export class Rock {
   beats(computerChoice) {
     let results;
 
-    if (computerChoice === "scissors") {
+    if (computerChoice === "rock") {
+      results = "The result is a tie!";
+    } else if (computerChoice === "scissors") {
       results = "Your rock wins!";
     } else {
       results = "You lose, paper wins ::sad face::";

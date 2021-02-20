@@ -1,4 +1,5 @@
 /* This pen was heavily influenced by codecademy's 'Rock, Paper, Scissors' project (https://bit.ly/1gEyvZE). The goal is to complete the codecademy project and modify the code you create to use the provided interface. */
+import { Rock } from './Rock.js';
 
 function computersTurn() {
   // Gives a random number between 0 and 1 which we will use to figure out the computer's choice
@@ -11,24 +12,6 @@ function computersTurn() {
     return "paper";
   } else {
     return "scissors";
-  }
-}
-
-class Rock {
-  get name() {
-    return "rock";
-  }
-
-  beats(computerChoice) {
-    let results;
-
-    if (computerChoice === "scissors") {
-      results = "Your rock wins!";
-    } else {
-      results = "You lose, paper wins ::sad face::";
-    }
-
-    return results;
   }
 }
 

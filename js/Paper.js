@@ -1,3 +1,5 @@
+import { paperBeatsRock } from './rules/PaperBeatsRock.js';
+
 export class Paper {
   get name() {
     return "paper";
@@ -8,7 +10,7 @@ export class Paper {
 
     if (computerChoice === "paper") {
       results = "The result is a tie!";
-    } else if (computerChoice === "rock") {
+    } else if (paperBeatsRock(this.name, computerChoice)) {
       results = "Your paper wins!";
     } else {
       results = "You lose, scissors wins ::sad face::";

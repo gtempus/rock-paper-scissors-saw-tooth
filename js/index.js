@@ -20,16 +20,19 @@ function computersTurn() {
 export function compare(yourChoice) {
   // Declare the variables
   const computerChoice = computersTurn();
+  let yourChoiceAsAnObject;
   let results;
 
   // Use the player's choice and computer's choice to find the winner
   if (yourChoice === new Rock().name) {
-    results = new Rock().beats(computerChoice)
+    yourChoiceAsAnObject = new Rock();
   } else if (yourChoice === new Paper().name) {
-    results = new Paper().beat(computerChoice);
+    yourChoiceAsAnObject = new Paper();
   } else if (yourChoice === new Scissors().name) {
-    results = new Scissors().beat(computerChoice);
+    yourChoiceAsAnObject = new Scissors();
   }
+
+  results = yourChoiceAsAnObject.beats(computerChoice);
 
   // Show the results in a pop-up
   alert(results);

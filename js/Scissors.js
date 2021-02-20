@@ -3,7 +3,7 @@ export class Scissors {
     return "scissors";
   }
 
-  beat(computerChoice) {
+  beats(computerChoice) {
     let results;
 
     if (computerChoice === "scissors") {

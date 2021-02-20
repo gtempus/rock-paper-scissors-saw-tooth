@@ -3,7 +3,7 @@ export class Paper {
     return "paper";
   }
 
-  beat(computerChoice) {
+  beats(computerChoice) {
     let results;
 
     if (computerChoice === "paper") {

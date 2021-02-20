@@ -17,22 +17,27 @@ function computersTurn() {
   }
 }
 
+function createYourChoiceAsAnObject(yourChoice) {
+  let results;
+
+  if (yourChoice === new Rock().name) {
+    results = new Rock();
+  } else if (yourChoice === new Paper().name) {
+    results = new Paper();
+  } else if (yourChoice === new Scissors().name) {
+    results = new Scissors();
+  }
+
+  return results;
+}
+
 export function compare(yourChoice) {
   // Declare the variables
   const computerChoice = computersTurn();
-  let yourChoiceAsAnObject;
-  let results;
+  const yourChoiceAsAnObject = createYourChoiceAsAnObject(yourChoice);
 
   // Use the player's choice and computer's choice to find the winner
-  if (yourChoice === new Rock().name) {
-    yourChoiceAsAnObject = new Rock();
-  } else if (yourChoice === new Paper().name) {
-    yourChoiceAsAnObject = new Paper();
-  } else if (yourChoice === new Scissors().name) {
-    yourChoiceAsAnObject = new Scissors();
-  }
-
-  results = yourChoiceAsAnObject.beats(computerChoice);
+  const results = yourChoiceAsAnObject.beats(computerChoice);
 
   // Show the results in a pop-up
   alert(results);

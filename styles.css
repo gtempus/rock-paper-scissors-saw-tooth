@@ -1,0 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Londrina+Solid);
+body {
+  font-family: Helvetica, sans-serif;
+  background: #ddd;
+  padding: 5%;
+  color: #999;
+}
+
+img {
+  width: 100%;
+  max-width: 100px;
+  display: block;
+  margin: auto;
+}
+
+.game {
+  background: white;
+  max-width: 700px;
+  margin: auto;
+  padding: 60px 60px 80px;
+  border-top: 8px solid orange;
+  text-align: center;
+  text-transform: uppercase;
+}
+.game-title {
+  font-family: 'Londrina Solid', cursive;
+  font-size: 50px;
+  line-height: 1em;
+  color: orange;
+  margin: 0 0 60px;
+}
+@media (min-width: 700px) {
+  .game-title {
+    font-size: 75px;
+  }
+}
+.game-instructions {
+  font-size: 24px;
+  color: black;
+  padding: 0 0 20px;
+  margin: 0 0 40px;
+}
+.game-options {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+.game-selection {
+  margin: 0 0 20px;
+  padding: 0;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Londrina Solid', cursive;
+  line-height: 40px;
+}
+.game-selection:hover {
+  color: black;
+}
+@media (min-width: 400px) {
+  .game-selection {
+    width: 33.33%;
+    float: left;
+    margin: 0;
+  }
+}
+

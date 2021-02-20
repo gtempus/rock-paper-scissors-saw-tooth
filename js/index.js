@@ -1,5 +1,6 @@
 /* This pen was heavily influenced by codecademy's 'Rock, Paper, Scissors' project (https://bit.ly/1gEyvZE). The goal is to complete the codecademy project and modify the code you create to use the provided interface. */
 import { Rock } from './Rock.js';
+import { Paper } from './Paper.js';
 
 function computersTurn() {
   // Gives a random number between 0 and 1 which we will use to figure out the computer's choice
@@ -25,12 +26,8 @@ export function compare(yourChoice) {
     results = "The result is a tie!";
   } else if (yourChoice === new Rock().name) {
     results = new Rock().beats(computerChoice)
-  } else if (yourChoice === "paper") {
-    if (computerChoice === "rock") {
-      results = "Your paper wins!";
-    } else {
-      results = "You lose, scissors wins ::sad face::";
-    }
+  } else if (yourChoice === new Paper().name) {
+    results = new Paper().beat(computerChoice);
   } else if (yourChoice === "scissors") {
     if (computerChoice === "paper") {
       results = "Your scissors wins!";

@@ -38,6 +38,11 @@ export function compare(yourChoice) {
   const computerChoice = computersTurn();
   const yourChoiceAsAnObject = createYourChoiceAsAnObject(yourChoice);
 
+  if (yourChoice === computerChoice) {
+    alert("The result is a tie!");
+    return;
+  }
+
   /* Pre-empt isolated rules to run our explicit rules
    * with a short circuit */
   const winner = rules.find(rule => rule(yourChoice,computerChoice));

@@ -9,7 +9,7 @@ export class Scissors {
     let results;
 
     if (computerChoice === "scissors") {
-      results = "The result is a tie!";
+      results = "THIS SHOULD NEVER HAPPEN";
     } else if (scissorsBeatsPaper(this.name, computerChoice)) {
       results = "THIS SHOULD NEVER HAPPEN";
     } else {

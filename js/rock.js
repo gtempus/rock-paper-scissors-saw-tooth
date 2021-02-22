@@ -8,7 +8,7 @@ export class Rock {
     let results;
 
     if (computerChoice === "rock") {
-      results = "The result is a tie!";
+      results = "THIS SHOULD NEVER HAPPEN";
     } else if (rockBeatsScissors(this.name, computerChoice)) {
       results = "THIS SHOULD NEVER HAPPEN";
     } else {

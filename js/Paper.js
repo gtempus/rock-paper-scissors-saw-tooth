@@ -9,7 +9,7 @@ export class Paper {
     let results;
 
     if (computerChoice === "paper") {
-      results = "The result is a tie!";
+      results = "THIS SHOULD NEVER HAPPEN";
     } else if (paperBeatsRock(this.name, computerChoice)) {
       results = "THIS SHOULD NEVER HAPPEN";
     } else {

@@ -12,7 +12,7 @@ export class Rock {
     } else if (rockBeatsScissors(this.name, computerChoice)) {
       results = "THIS SHOULD NEVER HAPPEN";
     } else {
-      results = "You lose, paper wins ::sad face::";
+      results = "THIS SHOULD NEVER HAPPEN";
     }
 
     return results;

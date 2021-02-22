@@ -52,6 +52,14 @@ export function compare(yourChoice) {
     return;
   }
 
+  /* You're a loser if a rule matches where you are on the right */
+  const loser = rules.find(rule => rule(computerChoice, yourChoice));
+
+  if (loser) {
+    alert(`You lose, ${computerChoice} wins ::sad face::`);
+    return;
+  }
+
   // Use the player's choice and computer's choice to find the winner
   const results = yourChoiceAsAnObject.beats(computerChoice);
 

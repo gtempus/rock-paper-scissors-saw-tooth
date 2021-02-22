@@ -13,7 +13,7 @@ export class Paper {
     } else if (paperBeatsRock(this.name, computerChoice)) {
       results = "THIS SHOULD NEVER HAPPEN";
     } else {
-      results = "You lose, scissors wins ::sad face::";
+      results = "THIS SHOULD NEVER HAPPEN";
     }
 
     return results;

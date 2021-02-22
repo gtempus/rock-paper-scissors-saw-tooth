@@ -1,6 +1,6 @@
-import { paperBeatsRock } from "./PaperBeatsRock.js";
-import { rockBeatsScissors } from "./RockBeatsScissors.js";
-import { scissorsBeatsPaper } from "./ScissorsBeatsPaper.js";
+import { paperBeatsRock } from "./paperBeatsRock.js";
+import { rockBeatsScissors } from "./rockBeatsScissors.js";
+import { scissorsBeatsPaper } from "./scissorsBeatsPaper.js";
 
 export const rules = [
   paperBeatsRock,

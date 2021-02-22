@@ -1,8 +1,4 @@
 /* This pen was heavily influenced by codecademy's 'Rock, Paper, Scissors' project (https://bit.ly/1gEyvZE). The goal is to complete the codecademy project and modify the code you create to use the provided interface. */
-import { Rock } from './Rock.js';
-import { Paper } from './Paper.js';
-import { Scissors } from './Scissors.js';
-
 import { rules } from './rules/index.js';
 
 function computersTurn() {
@@ -19,24 +15,9 @@ function computersTurn() {
   }
 }
 
-function createYourChoiceAsAnObject(yourChoice) {
-  let results;
-
-  if (yourChoice === new Rock().name) {
-    results = new Rock();
-  } else if (yourChoice === new Paper().name) {
-    results = new Paper();
-  } else if (yourChoice === new Scissors().name) {
-    results = new Scissors();
-  }
-
-  return results;
-}
-
 export function compare(yourChoice) {
   // Declare the variables
   const computerChoice = computersTurn();
-  const yourChoiceAsAnObject = createYourChoiceAsAnObject(yourChoice);
 
   if (yourChoice === computerChoice) {
     alert("The result is a tie!");
@@ -59,10 +40,4 @@ export function compare(yourChoice) {
     alert(`You lose, ${computerChoice} wins ::sad face::`);
     return;
   }
-
-  // Use the player's choice and computer's choice to find the winner
-  const results = yourChoiceAsAnObject.beats(computerChoice);
-
-  // Show the results in a pop-up
-  alert(results);
 }

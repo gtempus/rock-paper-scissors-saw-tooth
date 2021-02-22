@@ -1,3 +1,4 @@
+import { rockBeatsScissors } from "./rules/RockBeatsScissors.js";
 export class Rock {
   get name() {
     return "rock";
@@ -8,7 +9,7 @@ export class Rock {
 
     if (computerChoice === "rock") {
       results = "The result is a tie!";
-    } else if (computerChoice === "scissors") {
+    } else if (rockBeatsScissors(this.name, computerChoice)) {
       results = "Your rock wins!";
     } else {
       results = "You lose, paper wins ::sad face::";

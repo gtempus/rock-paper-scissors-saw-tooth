@@ -1,3 +1,5 @@
+import { scissorsBeatsPaper } from "./rules/ScissorsBeatsPaper.js";
+
 export class Scissors {
   get name() {
     return "scissors";
@@ -8,7 +10,7 @@ export class Scissors {
 
     if (computerChoice === "scissors") {
       results = "The result is a tie!";
-    } else if (computerChoice === "paper") {
+    } else if (scissorsBeatsPaper(this.name, computerChoice)) {
       results = "Your scissors wins!";
     } else {
       results = "You lose, rock wins ::sad face::";

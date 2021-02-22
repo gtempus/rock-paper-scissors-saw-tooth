@@ -3,6 +3,8 @@ import { Rock } from './Rock.js';
 import { Paper } from './Paper.js';
 import { Scissors } from './Scissors.js';
 
+import { rules } from './rules/index.js';
+
 function computersTurn() {
   // Gives a random number between 0 and 1 which we will use to figure out the computer's choice
   const random = Math.random();
@@ -35,6 +37,15 @@ export function compare(yourChoice) {
   // Declare the variables
   const computerChoice = computersTurn();
   const yourChoiceAsAnObject = createYourChoiceAsAnObject(yourChoice);
+
+  /* Pre-empt isolated rules to run our explicit rules
+   * with a short circuit */
+  const winner = rules.find(rule => rule(yourChoice,computerChoice));
+
+  if (winner) {
+    alert(`Your ${yourChoice} wins!`);
+    return;
+  }
 
   // Use the player's choice and computer's choice to find the winner
   const results = yourChoiceAsAnObject.beats(computerChoice);

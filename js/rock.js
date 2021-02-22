@@ -10,7 +10,7 @@ export class Rock {
     if (computerChoice === "rock") {
       results = "The result is a tie!";
     } else if (rockBeatsScissors(this.name, computerChoice)) {
-      results = "Your rock wins!";
+      results = "THIS SHOULD NEVER HAPPEN";
     } else {
       results = "You lose, paper wins ::sad face::";
     }

@@ -11,7 +11,7 @@ export class Scissors {
     if (computerChoice === "scissors") {
       results = "The result is a tie!";
     } else if (scissorsBeatsPaper(this.name, computerChoice)) {
-      results = "Your scissors wins!";
+      results = "THIS SHOULD NEVER HAPPEN";
     } else {
       results = "You lose, rock wins ::sad face::";
     }

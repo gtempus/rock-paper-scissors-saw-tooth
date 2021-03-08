@@ -3,12 +3,12 @@ import { isPlayerAWinner } from './Relationship.js';
 
 function computersTurn() {
   // Gives a random number between 0 and 1 which we will use to figure out the computer's choice
-  const random = Math.random();
+    const random = Math.trunc(Math.random() * 100);
 
   // Figure out the computer's choice from the random number we generated
-  if (random < 0.34) {
+  if (random < 34) {
     return "rock";
-  } else if (random <= 0.67) {
+  } else if (random <= 67) {
     return "paper";
   } else {
     return "scissors";
